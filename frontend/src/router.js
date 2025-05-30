@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import DefaultLayout from './components/DefaultLayout .vue';
+import DefaultLayout from './components/DefaultLayout.vue';
 import Home from './pages/Home.vue';
 import Login from './pages/Login.vue';
 import Signup from './pages/Signup.vue';
@@ -38,4 +38,3 @@ const router = createRouter({
 
 export default router;
 
-//
