@@ -1,6 +1,6 @@
 <template>
     <Guest-layout>
-        <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+      <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>
 
 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
   <form class="space-y-6" action="#" method="POST">
