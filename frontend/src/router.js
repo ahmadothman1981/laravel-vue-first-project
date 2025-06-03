@@ -5,6 +5,7 @@ import Login from './pages/Login.vue';
 import Signup from './pages/Signup.vue';
 import MyImages from './pages/MyImages.vue';
 import NotFound from './pages/NotFound.vue';
+import { useUserStore } from './store/user';
 
 const routes = [
     {
@@ -13,7 +14,18 @@ const routes = [
         children: [
             {path:'/', name: 'Home', component: Home},
             {path:'/images', name: 'MyImages', component: MyImages},   
-        ]
+
+        ],
+        beforeEnter: async(to , from , next) => {
+            try{
+                const userStore = useUserStore();
+                await userStore.fetchUser();
+                next();
+            } catch(error){
+               // console.error(error);
+                next(false);
+            }
+        }
     },
     {
         path: '/login',
